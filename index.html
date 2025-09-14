@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Agrawal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+  /* Backgrounds */
+  --bg-light: #ffffff;      /* pure white */
+  --bg-muted: #f8f8f8;      /* slightly gray white */
+
+  /* Text */
+  --text-dark: #111111;     /* near black */
+  --text-muted: #333333;    /* softer dark gray */
+
+  /* Coffee tones (accents) */
+  --espresso: #1d110a;      /* deep brown */
+  --coffee: #5a391e;        /* medium brown */
+  --coffee-light: #8b6332;  /* warm accent */
+  --coffee-dark: #2d1b0f;   /* almost black brown */
+
+  /* Accent */
+  --accent: #d2691e;        /* burnt orange accent */
+}
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: var(--espresso);
+            background-color: var(--warm-white);
+        }
+        
+        .smooth-scroll { 
+            scroll-behavior: smooth; 
+        }
+        
+        /* Focus styles for accessibility */
+        a:focus, button:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        /* Improved typography hierarchy */
+        h1 { font-size: 1.75rem; font-weight: 600; }
+        h2 { font-size: 2rem; font-weight: 600; line-height: 1.2; }
+        h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; }
+        h4 { font-size: 1.125rem; font-weight: 500; }
+        
+        /* Better hover states */
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(60, 36, 21, 0.15);
+        }
+        
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        /* Status badges */
+        .status-active {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        
+        .status-released {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .status-upcoming {
+            background-color: var(--cream);
+            color: var(--coffee-dark);
+            border: 1px solid var(--coffee-light);
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    
+    <!-- Navigation -->
+    <nav style="border-bottom: 1px solid var(--coffee-light); background-color: var(--warm-white);" >
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 style="color: var(--espresso);">Rahul Agrawal</h1>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="#about" class="nav-link" style="color: var(--coffee);">About</a>
+                    <a href="#work" class="nav-link" style="color: var(--coffee);">Work</a>
+                    <a href="#talks" class="nav-link" style="color: var(--coffee);">Talks</a>
+                    <a href="#contact" class="nav-link" style="color: var(--coffee);">Contact</a>
+                </div>
+                <button id="menuBtn" class="md:hidden" style="color: var(--coffee);">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+<section class="py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    
+    <article class="group grid rounded-xl overflow-hidden border border-gray-300 bg-white text-gray-900 shadow-sm md:grid-cols-8">
+      <!-- 🔹 Profile Image -->
+      <div class="col-span-3 overflow-hidden">
+        <img 
+          src="./IMG_0860.JPG" 
+          alt="Rahul" 
+          class="h-64 md:h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+        >
+      </div>
+
+      <!-- 🔹 Profile Content -->
+      <div class="flex flex-col justify-center p-6 col-span-5">
+        <small class="mb-2 font-medium text-[var(--coffee-light)]">Software Developer</small>
+        <h2 class="text-2xl font-bold mb-3" style="color: var(--espresso);">
+          Hey, I'm Rahul
+        </h2>
+        <p class="text-lg mb-3" style="color: var(--coffee);">
+          Developer at BWH Studios, working with Frappe/ERPNext
+        </p>
+        <p style="color: var(--coffee-light);">
+          From Jagdalpur, Chhattisgarh
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- About -->
+    <section id="about" class="py-12" style="background-color: var(--cream);">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 style="color: var(--espresso);">What I do</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <p class="mb-4" style="color: var(--coffee-dark);">
+                        I work at BWH Studios where we specialize in Frappe customization and training. I'm also a Frappe Evaluator, which means I help review contributions to the framework.
+                    </p>
+                    <p class="mb-4" style="color: var(--coffee-dark);">
+                        Currently building LS Shop - an e-commerce integration with ERPNext. It's open source and handles multilingual/RTL support.
+                    </p>
+                    <p style="color: var(--coffee-dark);">
+                        I also created Tabby Frappe, a payment integration solution for other developers.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="mb-3" style="color: var(--espresso);">Tech I work with</h4>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 rounded text-sm" style="background-color: var(--warm-white); color: var(--coffee-dark); border: 1px solid var(--coffee-light);">Frappe</span>
+                        <span class="px-3 py-1 rounded text-sm" style="background-color: var(--warm-white); color: var(--coffee-dark); border: 1px solid var(--coffee-light);">ERPNext</span>
+                        <span class="px-3 py-1 rounded text-sm" style="background-color: var(--warm-white); color: var(--coffee-dark); border: 1px solid var(--coffee-light);">Python</span>
+                        <span class="px-3 py-1 rounded text-sm" style="background-color: var(--warm-white); color: var(--coffee-dark); border: 1px solid var(--coffee-light);">JavaScript</span>
+                        <span class="px-3 py-1 rounded text-sm" style="background-color: var(--warm-white); color: var(--coffee-dark); border: 1px solid var(--coffee-light);">Tailwind</span>
+                    </div>
+                    
+                    <h4 class="mb-3" style="color: var(--espresso);">Links</h4>
+                    <div class="space-y-2 text-sm">
+                        <div><a href="https://github.com/rl0007" class="transition-colors" style="color: var(--accent);">GitHub (@rl0007)</a></div>
+                        <div><a href="https://linkedin.com/in/rl0007" class="transition-colors" style="color: var(--accent);">LinkedIn</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="py-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 style="color: var(--espresso);">Current projects</h3>
+            
+            <div class="space-y-6">
+                <!-- LS Shop -->
+                <div class="rounded-lg p-6 hover-lift" style="border: 1px solid var(--coffee-light); background-color: var(--cream);">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 style="color: var(--espresso);">LS Shop</h4>
+                            <p class="text-sm" style="color: var(--coffee);">E-commerce integration with ERPNext</p>
+                        </div>
+                        <span class="px-3 py-1 text-xs rounded status-active">Active</span>
+                    </div>
+                    <p class="mb-3" style="color: var(--coffee-dark);">
+                        An open-source Frappe app that turns ERPNext into a proper e-commerce platform. We're handling 350k+ products and it's about 6x faster than the default webshop. Built with Tailwind and Alpine.js, supports RTL languages.
+                    </p>
+                    <p class="text-sm" style="color: var(--coffee);">
+                        Uses existing ERPNext DocTypes cleverly - Quotation becomes cart, Payment Entry tracks refunds.
+                    </p>
+                </div>
+
+                <!-- Tabby Frappe -->
+                <div class="rounded-lg p-6 hover-lift" style="border: 1px solid var(--coffee-light); background-color: var(--cream);">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 style="color: var(--espresso);">Tabby Frappe</h4>
+                            <p class="text-sm" style="color: var(--coffee);">Payment integration solution</p>
+                        </div>
+                        <span class="px-3 py-1 text-xs rounded status-released">Released</span>
+                    </div>
+                    <p style="color: var(--coffee-dark);">
+                        A plug-and-play solution for payment integrations in Frappe apps. Makes it easier for developers to add payment processing.
+                    </p>
+                </div>
+
+                <!-- BWH Studios -->
+                <div class="rounded-lg p-6 hover-lift" style="border: 1px solid var(--coffee-light); background-color: var(--cream);">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 style="color: var(--espresso);">BWH Studios</h4>
+                            <p class="text-sm" style="color: var(--coffee);">Full-time role</p>
+                        </div>
+                        <span class="px-3 py-1 text-xs rounded" style="background-color: var(--warm-white); color: var(--coffee-dark); border: 1px solid var(--coffee-light);">Current</span>
+                    </div>
+                    <p style="color: var(--coffee-dark);">
+                        We specialize in Frappe customization and training. I help businesses implement ERPNext and build custom solutions.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contributions -->
+            <div class="mt-12">
+                <h4 class="mb-4" style="color: var(--espresso);">Recent Frappe contributions</h4>
+                <div class="space-y-3">
+                    <div class="p-4 rounded" style="background-color: var(--cream); border: 1px solid var(--coffee-light);">
+                        <div class="flex items-center justify-between mb-2">
+                            <a href="https://github.com/frappe/frappe/pull/33894" class="font-medium transition-colors" style="color: var(--accent);">Improved error handling in payment processing</a>
+                            <span class="text-sm" style="color: var(--coffee-light);">Merged</span>
+                        </div>
+                        <p class="text-sm" style="color: var(--coffee);">Enhanced error messages and validation for payment workflows</p>
+                    </div>
+                    <div class="p-4 rounded" style="background-color: var(--cream); border: 1px solid var(--coffee-light);">
+                        <div class="flex items-center justify-between mb-2">
+                            <a href="https://github.com/frappe/frappe/pull/33861" class="font-medium transition-colors" style="color: var(--accent);">Export reports in background</a>
+                            <span class="text-sm" style="color: var(--coffee-light);">Merged</span>
+                        </div>
+                        <p class="text-sm" style="color: var(--coffee);">Allow users to export report in background</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talks -->
+    <section id="talks" class="py-12" style="background-color: var(--cream);">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 style="color: var(--espresso);">Talks & Workshops</h3>
+            
+            <div class="space-y-6">
+                <!-- Frappeverse 2025 -->
+                <div class="rounded-lg p-6 hover-lift" style="border: 1px solid var(--coffee-light); background-color: var(--warm-white);">
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h4 style="color: var(--espresso);">Frappeverse 2025</h4>
+                            <p class="text-sm" style="color: var(--coffee);">E-commerce Integration Talk</p>
+                        </div>
+                        <span class="text-sm" style="color: var(--coffee-light);">Recent</span>
+                    </div>
+                    <p class="text-sm" style="color: var(--coffee-dark);">
+                        Talked about building a faster multilingual e-commerce portal with 350k+ products. Shared our approach of working with Frappe fundamentals rather than against them.
+                    </p>
+                </div>
+
+                <!-- IIT Bhilai -->
+                <div class="rounded-lg p-6 hover-lift" style="border: 1px solid var(--coffee-light); background-color: var(--warm-white);">
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h4 style="color: var(--espresso);">IIT Bhilai</h4>
+                            <p class="text-sm" style="color: var(--coffee);">Git & GitHub Workshop</p>
+                        </div>
+                        <span class="text-sm" style="color: var(--coffee-light);">Completed</span>
+                    </div>
+                    <p class="text-sm" style="color: var(--coffee-dark);">
+                        Hands-on workshop covering Git basics to advanced workflows for students.
+                    </p>
+                </div>
+
+                <!-- Upcoming -->
+                <div class="rounded-lg p-6 hover-lift" style="border: 1px solid var(--coffee-light); background-color: var(--warm-white);">
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h4 style="color: var(--espresso);">GGIT Jaipur</h4>
+                            <p class="text-sm" style="color: var(--coffee);">Git & GitHub Workshop (Online)</p>
+                        </div>
+                        <span class="px-3 py-1 text-xs rounded status-upcoming">Upcoming</span>
+                    </div>
+                    <p class="text-sm" style="color: var(--coffee-dark);">
+                        Online Git/GitHub workshop for GGIT Jaipur students.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 style="color: var(--espresso);">Get in touch</h3>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4" style="color: var(--coffee-dark);">
+                        Feel free to reach out if you have questions about Frappe development, need help with ERPNext customization, or want me to speak at your event.
+                    </p>
+                    <p style="color: var(--coffee-dark);">
+                        I enjoy helping other developers, especially those getting started with the Frappe ecosystem.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="mb-3" style="color: var(--espresso);">Contact</h4>
+                    <div class="space-y-2 text-sm">
+                        <div>Email: <a href="mailto:rahul@buildwithhussain.com" class="transition-colors" style="color: var(--accent);">rahul@buildwithhussain.com</a></div>
+                        <div>LinkedIn: <a href="https://linkedin.com/in/rl0007" class="transition-colors" style="color: var(--accent);">linkedin.com/in/rl0007</a></div>
+                        <div>GitHub: <a href="https://github.com/rl0007" class="transition-colors" style="color: var(--accent);">github.com/rl0007</a></div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="mb-2" style="color: var(--espresso);">Available for</h4>
+                        <ul class="text-sm space-y-1" style="color: var(--coffee-dark);">
+                            <li>Speaking at conferences/meetups</li>
+                            <li>Frappe/ERPNext workshops</li>
+                            <li>Open source collaboration</li>
+                            <li>Technical consulting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8" style="border-top: 1px solid var(--coffee-light); background-color: var(--cream);">
+        <div class="max-w-4xl mx-auto px-6 text-center text-sm" style="color: var(--coffee);">
+            <p>Rahul Agrawal • Jagdalpur, Chhattisgarh • 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const nav = menuBtn?.nextElementSibling;
+        
+        menuBtn?.addEventListener('click', function() {
+            nav?.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
